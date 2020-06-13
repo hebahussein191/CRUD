@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>CRUD</title>
+</head>
+
+<body>
+    <!-- Start Create Form -->
+    <div class="container">
+        <h1 class="text-center my-5 text-danger">Create Products</h1>
+        <div class="form-group">
+            <input type="text" class="form-control mt-4 py-4" id="ProductNameInp" placeholder="Product Name">
+            <input type="text" class="form-control mt-4 py-4" id="ProductPriceInp" placeholder="Product Price">
+            <input type="text" class="form-control mt-4 py-4" id="ProductCategoryInp" placeholder="Product Category">
+            <textarea class="form-control mt-4 py-4" id="ProductDescInp" placeholder="Product Description"></textarea>
+            <div id="error"></div>
+            <div id="success"></div>
+            <button type="button" onclick="addProducts()" class="btn btn-dark mt-3" id="BtnAdd">Add Product</button>
+        </div>
+    </div>
+    <!-- End Create Form -->
+
+    <!-- Start Search Products -->
+    <div class="container">
+        <div class="w-50 m-auto pt-5">
+            <h2 class="text-center py-3 text-danger">Search</h2>
+            <input type="text" class="form-control" onkeyup="searchProduct(this.value)" placeholder="Search.....">
+        </div>
+    </div>
+    <!-- End Search Products -->
+
+    <!-- Start Create Table -->
+    <div class="container mt-5">
+        <table class="table table-striped table-dark text-withe text-center">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Product Category</th>
+                    <th>Product Description</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <tr>
+                    <td scope="row"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- End Create Table -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
